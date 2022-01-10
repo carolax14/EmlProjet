@@ -18,6 +18,9 @@ namespace EmlProjet
         public Form1()
         {
             InitializeComponent();
+            // ScrollBar
+            tbMessage.Multiline = true;
+            tbMessage.ScrollBars = ScrollBars.Both;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -62,12 +65,12 @@ namespace EmlProjet
 
                 if (eml.TextBody != null)
                 {
-                    tbMessage.Text = Encoding.UTF8.GetString(eml.TextBody.Body);
+                    tbMessage.Text = Encoding.UTF8.GetString(eml.TextBody.Body).ToString();
                 }
-                if (eml.HtmlBody != null)
+                /*if (eml.HtmlBody != null)
                 {
                    tbMessage.Text = Encoding.UTF8.GetString(eml.HtmlBody.Body);
-                }
+                }*/
 
             }
 

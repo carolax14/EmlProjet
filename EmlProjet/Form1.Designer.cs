@@ -80,9 +80,9 @@ namespace EmlProjet
             this.lbSubtitle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbSubtitle2.Location = new System.Drawing.Point(224, 273);
             this.lbSubtitle2.Name = "lbSubtitle2";
-            this.lbSubtitle2.Size = new System.Drawing.Size(224, 18);
+            this.lbSubtitle2.Size = new System.Drawing.Size(118, 18);
             this.lbSubtitle2.TabIndex = 24;
-            this.lbSubtitle2.Text = "Entrez un nom du fichier à lire";
+            this.lbSubtitle2.Text = "Votre message";
             // 
             // label4
             // 
