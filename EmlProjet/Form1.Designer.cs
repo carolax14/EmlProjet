@@ -80,9 +80,9 @@ namespace EmlProjet
             this.lbSubtitle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbSubtitle2.Location = new System.Drawing.Point(224, 273);
             this.lbSubtitle2.Name = "lbSubtitle2";
-            this.lbSubtitle2.Size = new System.Drawing.Size(118, 18);
+            this.lbSubtitle2.Size = new System.Drawing.Size(136, 18);
             this.lbSubtitle2.TabIndex = 24;
-            this.lbSubtitle2.Text = "Votre message";
+            this.lbSubtitle2.Text = "Lecture du fichier";
             // 
             // label4
             // 
@@ -130,6 +130,7 @@ namespace EmlProjet
             this.btnRead.TabIndex = 17;
             this.btnRead.Text = "Lire";
             this.btnRead.UseVisualStyleBackColor = false;
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
             // tbSource
             // 
@@ -219,9 +220,11 @@ namespace EmlProjet
             // 
             // tbFrom
             // 
+            this.tbFrom.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbFrom.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbFrom.Location = new System.Drawing.Point(224, 326);
             this.tbFrom.Name = "tbFrom";
+            this.tbFrom.ReadOnly = true;
             this.tbFrom.Size = new System.Drawing.Size(371, 22);
             this.tbFrom.TabIndex = 25;
             // 
@@ -241,6 +244,8 @@ namespace EmlProjet
             this.tbTo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbTo.Location = new System.Drawing.Point(648, 326);
             this.tbTo.Name = "tbTo";
+            this.tbTo.ReadOnly = true;
+            this.tbTo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbTo.Size = new System.Drawing.Size(371, 22);
             this.tbTo.TabIndex = 27;
             // 
@@ -260,6 +265,7 @@ namespace EmlProjet
             this.tbCc.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbCc.Location = new System.Drawing.Point(648, 380);
             this.tbCc.Name = "tbCc";
+            this.tbCc.ReadOnly = true;
             this.tbCc.Size = new System.Drawing.Size(371, 22);
             this.tbCc.TabIndex = 31;
             // 
@@ -279,6 +285,7 @@ namespace EmlProjet
             this.tbDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbDate.Location = new System.Drawing.Point(224, 380);
             this.tbDate.Name = "tbDate";
+            this.tbDate.ReadOnly = true;
             this.tbDate.Size = new System.Drawing.Size(371, 22);
             this.tbDate.TabIndex = 29;
             // 
@@ -298,6 +305,7 @@ namespace EmlProjet
             this.tbSubject.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbSubject.Location = new System.Drawing.Point(648, 432);
             this.tbSubject.Name = "tbSubject";
+            this.tbSubject.ReadOnly = true;
             this.tbSubject.Size = new System.Drawing.Size(371, 22);
             this.tbSubject.TabIndex = 35;
             // 
@@ -317,6 +325,7 @@ namespace EmlProjet
             this.tbCci.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbCci.Location = new System.Drawing.Point(224, 432);
             this.tbCci.Name = "tbCci";
+            this.tbCci.ReadOnly = true;
             this.tbCci.Size = new System.Drawing.Size(371, 22);
             this.tbCci.TabIndex = 33;
             // 
@@ -337,17 +346,23 @@ namespace EmlProjet
             this.tbMessage.Location = new System.Drawing.Point(224, 571);
             this.tbMessage.Multiline = true;
             this.tbMessage.Name = "tbMessage";
+            this.tbMessage.ReadOnly = true;
             this.tbMessage.Size = new System.Drawing.Size(795, 108);
             this.tbMessage.TabIndex = 37;
             // 
             // lstbAttachment
             // 
+            this.lstbAttachment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lstbAttachment.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.lstbAttachment.ForeColor = System.Drawing.Color.Teal;
             this.lstbAttachment.FormattingEnabled = true;
-            this.lstbAttachment.ItemHeight = 15;
+            this.lstbAttachment.ItemHeight = 16;
             this.lstbAttachment.Location = new System.Drawing.Point(224, 487);
             this.lstbAttachment.Name = "lstbAttachment";
-            this.lstbAttachment.Size = new System.Drawing.Size(795, 49);
+            this.lstbAttachment.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.lstbAttachment.Size = new System.Drawing.Size(795, 36);
             this.lstbAttachment.TabIndex = 39;
+            this.lstbAttachment.SelectedIndexChanged += new System.EventHandler(this.lstbAttachment_SelectedIndexChanged);
             // 
             // lbAttachment
             // 
